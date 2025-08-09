@@ -51,3 +51,32 @@
   131   ansible-playbook loop.yaml --ask-become-pass
   132   ansible-playbook loop_uninstall.yaml --ask-become-pass
   134   ansible-playbook httpd.yaml --ask-become-pass
+  1  subscription-manager repos --enable ansible-2.9-for-rhel-8-x86_64-rpms
+    2  subscription-manager repos --list | grep -i ansible
+    3  sudo subscription-manager repos --enable ansible-automation-platform-2.3-for-rhel-9-x86_64-rpms
+    4  yum install ansible* -y
+    5  ansible --version
+    6  ansible-playbook --version
+    7  ssh-keygen
+    8  su - vasanth
+    9  usermod -aG wheel vasanth
+   10  visudo
+   11  su - vasanth
+   12  nmcli con mod eth0 ipv4.addresses 172.23.82.152/24
+   13  nmcli con mod eth0 ipv4.gateway 172.23.82.1
+   14  nmcli con mod eth0 ipv4.dns "8.8.8.8 1.1.1.1"
+   15  nmcli con mod eth0 ipv4.method manual
+   16  nmcli con down eth0 && sudo nmcli con up eth0
+   17  yum install openssh-server
+   18  systemctl enable sshd
+   19  systemctl status sshd
+   22  vi sshd_config
+   24  nmcli con down etho
+   25  nmcli con mod eth0 ipv4.addresses 172.23.82.152/24
+   26  nmcli con mod eth0 ipv4.gateway 172.23.82.1
+   27  nmcli con mod eth0 ipv4.dns "8.8.8.8 1.1.1.1"
+   28  nmcli con mod eth0 ipv4.method manual
+   29  nmcli con down eth0
+   30  nmcli con up eth0
+   32  ping google.com -c 3
+   33  sudo reboot
