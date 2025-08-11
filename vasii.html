@@ -66,7 +66,6 @@
    13  nmcli con mod eth0 ipv4.gateway 172.23.82.1
    14  nmcli con mod eth0 ipv4.dns "8.8.8.8 1.1.1.1"
    15  nmcli con mod eth0 ipv4.method manual
-   16  nmcli con down eth0 && sudo nmcli con up eth0
    17  yum install openssh-server
    18  systemctl enable sshd
    19  systemctl status sshd
